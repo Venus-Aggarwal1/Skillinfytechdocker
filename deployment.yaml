@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: venus-app1-deployment
+  labels:
+    app: venusapp1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: venusapp1
+  template:
+    metadata:
+      labels:
+        app: venusapp1
+    spec:
+      containers:
+      - name: venus-app1-container
+        image: venusapp1:latest
+        imagePullPolicy: IfNotPresent  # CRITICAL: Tells K8s to look locally instead of pulling from DockerHub
+        ports:
+        - containerPort: 8080   # Change to match the port your app listens on
+
