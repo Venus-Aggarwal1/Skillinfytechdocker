@@ -48,5 +48,4 @@ kubectl apply -f service.yaml
 
 Verify that your pods are up and running smoothly:
 bash
-kubectl get pods
-
+kubectl get po
