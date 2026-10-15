@@ -45,7 +45,8 @@ Apply the configurations directly to your Kind cluster:
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
+Ensure that your pods are running smoothly:
 
+kubectl get pods
 Verify that your pods are up and running smoothly:
-bash
-kubectl get po
+
